@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RM Market — Luxury Shopping Experience</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ═══════════════════════════════ CURSOR ═══════════════════════════════ -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#home" class="nav-logo">
+          <span class="logo-rm">RM</span><span class="logo-market">MARKET</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#shop" class="nav-link">Shop</a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            type="button"
+            class="nav-icon-btn"
+            aria-label="Search"
+            title="Search"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="nav-icon-btn cart-btn"
+            aria-label="Cart"
+            title="Shopping cart"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+          <button
+            type="button"
+            class="hamburger"
+            id="hamburger"
+            aria-label="Menu"
+            aria-expanded="false"
+            title="Toggle navigation menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+    <section class="hero" id="home">
+      <canvas class="particles-canvas" id="particlesCanvas"></canvas>
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+      <div class="hero-glow hero-glow-3"></div>
+
+      <div class="hero-content" id="heroContent">
+        <p class="hero-eyebrow reveal-up">Est. 2025 · Premium Collection</p>
+        <h1 class="hero-title reveal-up delay-1">
+          <span class="hero-title-line">RM</span>
+          <span class="hero-title-line gold-text">Market</span>
+        </h1>
+        <p class="hero-subtitle reveal-up delay-2">
+          Luxury Shopping Experience
+        </p>
+        <p class="hero-desc reveal-up delay-3">
+          Curated excellence. Crafted for those who demand nothing less than
+          perfection.
+        </p>
+        <div class="hero-cta reveal-up delay-4">
+          <a href="#shop" class="btn-primary">
+            <span>Explore Collection</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#categories" class="btn-ghost">View Categories</a>
+        </div>
+        <div class="hero-stats reveal-up delay-5">
+          <div class="stat">
+            <span class="stat-num">12K+</span
+            ><span class="stat-label">Products</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">98%</span
+            ><span class="stat-label">Satisfaction</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">150+</span
+            ><span class="stat-label">Brands</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ MARQUEE ═══════════════════════════════ -->
+    <div class="marquee-strip">
+      <div class="marquee-track">
+        <span>Luxury Watches</span><span class="gold-dot">◆</span>
+        <span>Premium Fashion</span><span class="gold-dot">◆</span>
+        <span>Smart Devices</span><span class="gold-dot">◆</span>
+        <span>Exclusive Sneakers</span><span class="gold-dot">◆</span>
+        <span>Gaming Elite</span><span class="gold-dot">◆</span>
+        <span>Luxury Watches</span><span class="gold-dot">◆</span>
+        <span>Premium Fashion</span><span class="gold-dot">◆</span>
+        <span>Smart Devices</span><span class="gold-dot">◆</span>
+        <span>Exclusive Sneakers</span><span class="gold-dot">◆</span>
+        <span>Gaming Elite</span><span class="gold-dot">◆</span>
+        <span>Luxury Watches</span><span class="gold-dot">◆</span>
+        <span>Premium Fashion</span><span class="gold-dot">◆</span>
+        <span>Smart Devices</span><span class="gold-dot">◆</span>
+        <span>Exclusive Sneakers</span><span class="gold-dot">◆</span>
+        <span>Gaming Elite</span><span class="gold-dot">◆</span>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════ SHOP ═══════════════════════════════ -->
+    <section class="section shop-section" id="shop">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow scroll-reveal">Featured Collection</p>
+          <h2 class="section-title scroll-reveal">
+            Curated <em>Excellence</em>
+          </h2>
+          <p class="section-desc scroll-reveal">
+            Each piece selected with uncompromising standards for those who live
+            at the pinnacle.
+          </p>
+        </div>
+
+        <div class="filter-tabs scroll-reveal">
+          <button type="button" class="filter-btn active" data-filter="all">
+            All
+          </button>
+          <button type="button" class="filter-btn" data-filter="watches">
+            Watches
+          </button>
+          <button type="button" class="filter-btn" data-filter="sneakers">
+            Sneakers
+          </button>
+          <button type="button" class="filter-btn" data-filter="tech">
+            Tech
+          </button>
+          <button type="button" class="filter-btn" data-filter="gaming">
+            Gaming
+          </button>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+          <div class="product-card scroll-reveal" data-category="watches">
+            <div class="card-badge">New Arrival</div>
+            <div class="card-visual">
+              <div class="product-img-wrap">
+                <div class="product-img watch-img">
+                  <div class="watch-3d">
+                    <div class="watch-face">
+                      <div class="watch-dial"></div>
+                      <div class="watch-hand hour-hand"></div>
+                      <div class="watch-hand minute-hand"></div>
+                      <div class="watch-center"></div>
+                    </div>
+                    <div class="watch-band band-top"></div>
+                    <div class="watch-band band-bottom"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-shine"></div>
+            </div>
+            <div class="card-info">
+              <div class="card-brand">CHRONOS</div>
+              <h3 class="card-title">Royal Prestige X7</h3>
+              <div class="card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-count">(247)</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-price">
+                  <span class="price-current">$4,299</span>
+                  <span class="price-old">$5,100</span>
+                </div>
+                <button
+                  type="button"
+                  class="add-to-cart"
+                  data-name="Royal Prestige X7"
+                  data-price="4299"
+                  aria-label="Add Royal Prestige X7 to cart"
+                  title="Add to cart"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card scroll-reveal" data-category="sneakers">
+            <div class="card-badge sale-badge">Sale −20%</div>
+            <div class="card-visual">
+              <div class="product-img-wrap">
+                <div class="product-img sneaker-img">
+                  <div class="sneaker-3d">
+                    <div class="shoe-sole"></div>
+                    <div class="shoe-upper"></div>
+                    <div class="shoe-toe"></div>
+                    <div class="shoe-laces"></div>
+                    <div class="shoe-stripe"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-shine"></div>
+            </div>
+            <div class="card-info">
+              <div class="card-brand">AUREX</div>
+              <h3 class="card-title">Velocity Gold Edition</h3>
+              <div class="card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-count">(189)</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-price">
+                  <span class="price-current">$879</span>
+                  <span class="price-old">$1,099</span>
+                </div>
+                <button
+                  type="button"
+                  class="add-to-cart"
+                  data-name="Velocity Gold Edition"
+                  data-price="879"
+                  aria-label="Add Velocity Gold Edition to cart"
+                  title="Add to cart"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card scroll-reveal" data-category="tech">
+            <div class="card-badge">Bestseller</div>
+            <div class="card-visual">
+              <div class="product-img-wrap">
+                <div class="product-img phone-img">
+                  <div class="phone-3d">
+                    <div class="phone-body">
+                      <div class="phone-screen">
+                        <div class="phone-screen-glow"></div>
+                      </div>
+                      <div class="phone-camera"></div>
+                      <div class="phone-button"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-shine"></div>
+            </div>
+            <div class="card-info">
+              <div class="card-brand">LUMEX</div>
+              <h3 class="card-title">Apex Pro Ultra 16</h3>
+              <div class="card-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-count">(523)</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-price">
+                  <span class="price-current">$1,599</span>
+                  <span class="price-old">$1,899</span>
+                </div>
+                <button
+                  type="button"
+                  class="add-to-cart"
+                  data-name="Apex Pro Ultra 16"
+                  data-price="1599"
+                  aria-label="Add Apex Pro Ultra 16 to cart"
+                  title="Add to cart"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card scroll-reveal" data-category="gaming">
+            <div class="card-visual">
+              <div class="product-img-wrap">
+                <div class="product-img headset-img">
+                  <div class="headset-3d">
+                    <div class="headset-arc"></div>
+                    <div class="headset-cup cup-left">
+                      <div class="cup-mesh"></div>
+                    </div>
+                    <div class="headset-cup cup-right">
+                      <div class="cup-mesh"></div>
+                    </div>
+                    <div class="headset-glow"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-shine"></div>
+            </div>
+            <div class="card-info">
+              <div class="card-brand">NEXUS</div>
+              <h3 class="card-title">Phantom Elite 360</h3>
+              <div class="card-rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-count">(312)</span>
+              </div>
+              <div class="card-footer">
+                <div class="card-price">
+                  <span class="price-current">$449</span>
+                  <span class="price-old">$549</span>
+                </div>
+                <button
+                  type="button"
+                  class="add-to-cart"
+                  data-name="Phantom Elite 360"
+                  data-price="449"
+                  aria-label="Add Phantom Elite 360 to cart"
+                  title="Add to cart"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-cta scroll-reveal">
+          <a href="#shop" class="btn-primary">View All Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ CATEGORIES ═══════════════════════════════ -->
+    <section class="section categories-section" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow scroll-reveal">Browse By</p>
+          <h2 class="section-title scroll-reveal">Our <em>Categories</em></h2>
+        </div>
+        <div class="categories-grid">
+          <div
+            class="cat-card cat-large scroll-reveal"
+            style="--cat-hue: 45deg"
+          >
+            <div class="cat-bg"></div>
+            <div class="cat-icon">
+              <svg viewBox="0 0 64 64" fill="none">
+                <rect
+                  x="20"
+                  y="28"
+                  width="24"
+                  height="18"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M26 28V24a6 6 0 0 1 12 0v4"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <circle cx="32" cy="37" r="3" fill="currentColor" />
+                <path
+                  d="M12 50h40"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="cat-content">
+              <h3>Electronics</h3>
+              <p>320+ Products</p>
+            </div>
+            <div class="cat-arrow">→</div>
+          </div>
+
+          <div class="cat-card scroll-reveal" style="--cat-hue: 45deg">
+            <div class="cat-bg"></div>
+            <div class="cat-icon">
+              <svg viewBox="0 0 64 64" fill="none">
+                <path
+                  d="M20 20h24v28H20z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  rx="2"
+                />
+                <path
+                  d="M26 20v-4a6 6 0 0 1 12 0v4"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M26 36h12M26 42h8"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="cat-content">
+              <h3>Fashion</h3>
+              <p>580+ Products</p>
+            </div>
+            <div class="cat-arrow">→</div>
+          </div>
+
+          <div class="cat-card scroll-reveal" style="--cat-hue: 45deg">
+            <div class="cat-bg"></div>
+            <div class="cat-icon">
+              <svg viewBox="0 0 64 64" fill="none">
+                <ellipse
+                  cx="32"
+                  cy="40"
+                  rx="16"
+                  ry="6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M16 40c0-8 6-16 16-16s16 8 16 16"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M22 36l4-8 4 4 4-8 4 8"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </div>
+            <div class="cat-content">
+              <h3>Sneakers</h3>
+              <p>210+ Products</p>
+            </div>
+            <div class="cat-arrow">→</div>
+          </div>
+
+          <div class="cat-card scroll-reveal" style="--cat-hue: 45deg">
+            <div class="cat-bg"></div>
+            <div class="cat-icon">
+              <svg viewBox="0 0 64 64" fill="none">
+                <circle
+                  cx="32"
+                  cy="36"
+                  r="14"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="32"
+                  cy="36"
+                  r="8"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <rect
+                  x="28"
+                  y="18"
+                  width="8"
+                  height="6"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M32 22v6M20 36h4M40 36h4M32 46v4"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </div>
+            <div class="cat-content">
+              <h3>Watches</h3>
+              <p>145+ Products</p>
+            </div>
+            <div class="cat-arrow">→</div>
+          </div>
+
+          <div class="cat-card cat-wide scroll-reveal" style="--cat-hue: 45deg">
+            <div class="cat-bg"></div>
+            <div class="cat-icon">
+              <svg viewBox="0 0 64 64" fill="none">
+                <rect
+                  x="12"
+                  y="28"
+                  width="16"
+                  height="12"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <rect
+                  x="36"
+                  y="28"
+                  width="16"
+                  height="12"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M28 34h8"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M20 28v-6a12 12 0 0 1 24 0v6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <circle cx="20" cy="34" r="2" fill="currentColor" />
+                <circle cx="44" cy="34" r="2" fill="currentColor" />
+              </svg>
+            </div>
+            <div class="cat-content">
+              <h3>Gaming</h3>
+              <p>390+ Products</p>
+            </div>
+            <div class="cat-arrow">→</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ FEATURES ═══════════════════════════════ -->
+    <section class="section features-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow scroll-reveal">Why Choose Us</p>
+          <h2 class="section-title scroll-reveal">Premium <em>Service</em></h2>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card scroll-reveal">
+            <div class="feature-icon-wrap">
+              <div class="feature-icon">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <path
+                    d="M24 4L4 14v10c0 10.5 8.5 20.3 20 23 11.5-2.7 20-12.5 20-23V14L24 4z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16 24l6 6 10-10"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3>Secure Payment</h3>
+            <p>
+              Military-grade encryption protecting every transaction. Shop with
+              absolute confidence and peace of mind.
+            </p>
+          </div>
+
+          <div class="feature-card scroll-reveal">
+            <div class="feature-icon-wrap">
+              <div class="feature-icon">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <path
+                    d="M8 16h32l-4 20H12L8 16z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8 16l-2-8H2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    cx="18"
+                    cy="42"
+                    r="2.5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="32"
+                    cy="42"
+                    r="2.5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M16 26l4 4 8-8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3>Fast Delivery</h3>
+            <p>
+              Express global shipping with white-glove handling. Your luxury
+              items arrive perfectly preserved, on time.
+            </p>
+          </div>
+
+          <div class="feature-card scroll-reveal">
+            <div class="feature-icon-wrap">
+              <div class="feature-icon">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <path
+                    d="M24 4l5.09 10.26L40 16.18l-8 7.79 1.89 11-9.89-5.19L14.11 35 16 24 8 16.18l10.91-1.92L24 4z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3>Premium Quality</h3>
+            <p>
+              Every product rigorously vetted for authenticity. Only genuine
+              luxury goods from verified global brands.
+            </p>
+          </div>
+
+          <div class="feature-card scroll-reveal">
+            <div class="feature-icon-wrap">
+              <div class="feature-icon">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <path
+                    d="M14 8h20a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4H26l-6 6-6-6H14a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18 20h12M18 26h8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3>24/7 Support</h3>
+            <p>
+              Dedicated concierge service available around the clock. Premium
+              members receive direct expert assistance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ TESTIMONIALS ═══════════════════════════════ -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow scroll-reveal">Client Stories</p>
+          <h2 class="section-title scroll-reveal">What They <em>Say</em></h2>
+        </div>
+
+        <div class="testimonials-wrapper scroll-reveal">
+          <div class="testimonials-track" id="testimonialsTrack">
+            <div class="testimonial-card">
+              <div class="testi-quote">❝</div>
+              <p class="testi-text">
+                RM Market has redefined my shopping expectations. The packaging,
+                the quality, the entire experience — nothing short of
+                extraordinary. My Chronos watch arrived as if delivered by the
+                brand itself.
+              </p>
+              <div class="testi-author">
+                <div class="testi-avatar">
+                  <div class="avatar-ring">
+                    <div class="avatar-initials">AC</div>
+                  </div>
+                </div>
+                <div class="testi-info">
+                  <strong>Alexandre Chevalier</strong>
+                  <span>Fashion Director, Paris</span>
+                  <div class="testi-stars">★★★★★</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testi-quote">❝</div>
+              <p class="testi-text">
+                I've shopped luxury for 20 years and RM Market sits at the top.
+                Their curation is impeccable, delivery flawless. The gold-tier
+                membership alone is worth every cent. Absolute world-class
+                service.
+              </p>
+              <div class="testi-author">
+                <div class="testi-avatar">
+                  <div class="avatar-ring">
+                    <div class="avatar-initials">SN</div>
+                  </div>
+                </div>
+                <div class="testi-info">
+                  <strong>Sophia Nakamura</strong>
+                  <span>Entrepreneur, Tokyo</span>
+                  <div class="testi-stars">★★★★★</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testi-quote">❝</div>
+              <p class="testi-text">
+                The Apex Pro Ultra arrived in 36 hours to Dubai. The product was
+                flawless, exactly as described. Their support team answered at
+                3am. This is what luxury service truly means in 2025.
+              </p>
+              <div class="testi-author">
+                <div class="testi-avatar">
+                  <div class="avatar-ring">
+                    <div class="avatar-initials">KA</div>
+                  </div>
+                </div>
+                <div class="testi-info">
+                  <strong>Khalid Al-Rasheed</strong>
+                  <span>Tech CEO, Dubai</span>
+                  <div class="testi-stars">★★★★★</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-nav">
+            <button
+              type="button"
+              class="testi-btn"
+              id="testiPrev"
+              aria-label="Previous testimonial"
+              title="Previous testimonial"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <div class="testi-dots" id="testiDots">
+              <span class="testi-dot active"></span>
+              <span class="testi-dot"></span>
+              <span class="testi-dot"></span>
+            </div>
+            <button
+              type="button"
+              class="testi-btn"
+              id="testiNext"
+              aria-label="Next testimonial"
+              title="Next testimonial"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ NEWSLETTER ═══════════════════════════════ -->
+    <section class="newsletter-section">
+      <div class="newsletter-inner">
+        <div class="newsletter-glow"></div>
+        <p class="section-eyebrow scroll-reveal" style="color: var(--gold)">
+          Exclusive Access
+        </p>
+        <h2 class="newsletter-title scroll-reveal">
+          Join the Inner <em>Circle</em>
+        </h2>
+        <p class="newsletter-desc scroll-reveal">
+          Be first to discover new arrivals, exclusive drops, and members-only
+          privileges.
+        </p>
+        <form class="newsletter-form scroll-reveal" id="newsletterForm">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit" class="btn-primary">Subscribe</button>
+        </form>
+        <p class="newsletter-note scroll-reveal">
+          No spam, ever. Unsubscribe at any time.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer class="footer" id="contact">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo">
+            <span class="logo-rm">RM</span
+            ><span class="logo-market">MARKET</span>
+          </a>
+          <p>
+            Luxury redefined. Excellence delivered. The pinnacle of online
+            shopping experience.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="5" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="YouTube">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"
+                />
+                <polygon
+                  points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="LinkedIn">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">Luxury Watches</a></li>
+            <li><a href="#">Premium Sneakers</a></li>
+            <li><a href="#">Tech & Gadgets</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About RM Market</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press Room</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Partners</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Returns & Exchange</a></li>
+            <li><a href="#">Authenticity Guarantee</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 RM Market. All rights reserved. Crafted with precision.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cart Notification Toast -->
+    <div class="toast" id="toast">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M20 6L9 17l-5-5" />
+      </svg>
+      <span id="toastMsg">Added to cart</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
